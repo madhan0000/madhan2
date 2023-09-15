@@ -1,0 +1,95 @@
+
+
+
+1. **Copy a File from Local to Remote**:
+   ```
+   scp /path/to/local/file.txt user@remote-server:/path/to/remote/
+   ```
+   Example:
+   ```
+   scp /home/user/documents/report.pdf user@192.168.1.100:/var/www/html/
+   ```
+
+2. **Copy a File from Remote to Local**:
+   ```
+   scp user@remote-server:/path/to/remote/file.txt /path/to/local/
+   ```
+   Example:
+   ```
+   scp user@192.168.1.100:/var/log/syslog /home/user/backups/
+   ```
+
+3. **Copy a Directory from Local to Remote (Recursively)**:
+   ```
+   scp -r /path/to/local/directory/ user@remote-server:/path/to/remote/
+   ```
+   Example:
+   ```
+   scp -r /home/user/docs/ user@192.168.1.100:/var/www/html/
+   ```
+
+4. **Copy a Directory from Remote to Local (Recursively)**:
+   ```
+   scp -r user@remote-server:/path/to/remote/directory/ /path/to/local/
+   ```
+   Example:
+   ```
+   scp -r user@192.168.1.100:/var/www/html/website/ /home/user/backups/
+   ```
+
+5. **Copy with Port Specified**:
+   ```
+   scp -P 2222 /path/to/local/file.txt user@remote-server:/path/to/remote/
+   ```
+   Example:
+   ```
+   scp -P 2222 /home/user/documents/report.pdf user@192.168.1.100:/var/www/html/
+   ```
+
+6. **Copying with Different SSH Key**:
+   ```
+   scp -i /path/to/private-key.pem /path/to/local/file.txt user@remote-server:/path/to/remote/
+   ```
+   Example:
+   ```
+   scp -i /home/user/.ssh/my_key.pem /home/user/documents/report.pdf user@192.168.1.100:/var/www/html/
+   ```
+
+7. **Copying Files Matching a Pattern**:
+   ```
+   scp /path/to/local/*.txt user@remote-server:/path/to/remote/
+   ```
+   Example:
+   ```
+   scp /home/user/docs/*.pdf user@192.168.1.100:/var/www/html/
+   ```
+
+8. **Preserve File Attributes (Permissions, Ownership)**:
+   ```
+   scp -rp /path/to/local/directory/ user@remote-server:/path/to/remote/
+   ```
+   Example:
+   ```
+   scp -rp /home/user/docs/ user@192.168.1.100:/var/www/html/
+   ```
+
+9. **Limit Bandwidth During Transfer**:
+   ```
+   scp -l 1000 /path/to/local/file.txt user@remote-server:/path/to/remote/
+   ```
+   Example:
+   ```
+   scp -l 500 /home/user/documents/largefile.zip user@192.168.1.100:/var/www/html/
+   ```
+
+10. **Quiet Mode (Suppress Progress)**:
+    ```
+    scp -q /path/to/local/file.txt user@remote-server:/path/to/remote/
+    ```
+    Example:
+    ```
+    scp -q /home/user/documents/report.pdf user@192.168.1.100:/var/www/html/
+    ```
+
+
+ 
